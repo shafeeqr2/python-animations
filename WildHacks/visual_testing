@@ -1,0 +1,15 @@
+from visual import *
+import math
+
+ball = sphere(pos=(1,2,1), radius=0.5, color = color.yellow)
+
+n = 5
+
+#circum
+cfm = 
+
+for i in range(n):
+    ball = sphere(pos=(,2,1), radius=0.5, color = color.yellow)
+
+
+    
