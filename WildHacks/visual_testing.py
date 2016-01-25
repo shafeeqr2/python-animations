@@ -1,3 +1,5 @@
+##this project is still in the works. For now the code is not very clean.
+
 from visual import *
 
 import math
