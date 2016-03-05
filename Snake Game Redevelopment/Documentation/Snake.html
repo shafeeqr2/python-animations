@@ -1,0 +1,84 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module Snake</title>
+<meta charset="utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>Snake</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:///C:/users/keyur/gamesmiths/source/snake.py">c:\users\keyur\gamesmiths\source\snake.py</a></font></td></tr></table>
+    <p></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="pygame.html">pygame</a><br>
+</td><td width="25%" valign=top></td><td width="25%" valign=top></td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="Snake.html#Snake">Snake</a>
+</font></dt></dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Snake">class <strong>Snake</strong></a></font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt><a href="#Snake">Snake</a>&nbsp;class&nbsp;encapsulates&nbsp;the&nbsp;characteristics&nbsp;of&nbsp;the&nbsp;snake<br>
+&nbsp;<br>
+Environment&nbsp;variables:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;direction:&nbsp;integer<br>
+&nbsp;&nbsp;&nbsp;&nbsp;points[]:&nbsp;list&nbsp;of&nbsp;pygame.Rect&nbsp;objects<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;assumption:&nbsp;__init__&nbsp;is&nbsp;executed&nbsp;first<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="Snake-__init__"><strong>__init__</strong></a>(self)</dt><dd><tt>Constructor&nbsp;method&nbsp;for&nbsp;<a href="#Snake">Snake</a><br>
+Transition:&nbsp;initialized&nbsp;into&nbsp;new&nbsp;snake&nbsp;of&nbsp;length&nbsp;20<br>
+input:none<br>
+output:none</tt></dd></dl>
+
+<dl><dt><a name="Snake-__repr__"><strong>__repr__</strong></a>(self)</dt><dd><tt>built&nbsp;in&nbsp;python&nbsp;method&nbsp;to&nbsp;change&nbsp;representation&nbsp;of&nbsp;objects.<br>
+Used&nbsp;it&nbsp;to&nbsp;assist&nbsp;with&nbsp;automated&nbsp;testing.</tt></dd></dl>
+
+<dl><dt><a name="Snake-changeDir"><strong>changeDir</strong></a>(self, direction)</dt><dd><tt>function&nbsp;to&nbsp;change&nbsp;the&nbsp;current&nbsp;direction&nbsp;the&nbsp;snake&nbsp;is&nbsp;headed<br>
+&nbsp;<br>
+Transition:&nbsp;changes&nbsp;value&nbsp;of&nbsp;the&nbsp;direction&nbsp;based&nbsp;on&nbsp;passed&nbsp;value<br>
+input:integer&nbsp;value&nbsp;corresponding&nbsp;to&nbsp;new&nbsp;direction<br>
+output:none<br>
+&nbsp;<br>
+exception:&nbsp;when&nbsp;the&nbsp;new&nbsp;direction&nbsp;is&nbsp;the&nbsp;same&nbsp;or&nbsp;opposite&nbsp;direction&nbsp;of&nbsp;current&nbsp;direction,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dont&nbsp;update</tt></dd></dl>
+
+<dl><dt><a name="Snake-grow"><strong>grow</strong></a>(self)</dt><dd><tt>function&nbsp;to&nbsp;increase&nbsp;the&nbsp;size&nbsp;of&nbsp;the&nbsp;snake<br>
+&nbsp;<br>
+Transition:&nbsp;adds&nbsp;a&nbsp;point&nbsp;to&nbsp;the&nbsp;snake<br>
+input:none<br>
+output:none</tt></dd></dl>
+
+<dl><dt><a name="Snake-move"><strong>move</strong></a>(self)</dt><dd><tt>function&nbsp;to&nbsp;move&nbsp;the&nbsp;snake&nbsp;forward<br>
+&nbsp;<br>
+Transition:&nbsp;moves&nbsp;the&nbsp;points&nbsp;of&nbsp;the&nbsp;snake&nbsp;forward&nbsp;by&nbsp;one<br>
+input:none<br>
+output:none</tt></dd></dl>
+
+<dl><dt><a name="Snake-remove"><strong>remove</strong></a>(self, index)</dt><dd><tt>function&nbsp;to&nbsp;remove&nbsp;all&nbsp;points&nbsp;on&nbsp;the&nbsp;snake&nbsp;after&nbsp;index&nbsp;passed<br>
+&nbsp;<br>
+Transition:&nbsp;removes&nbsp;points&nbsp;on&nbsp;the&nbsp;snake&nbsp;after&nbsp;passed&nbsp;index<br>
+input:integer&nbsp;value&nbsp;corresponding&nbsp;to&nbsp;an&nbsp;index&nbsp;value<br>
+output:none</tt></dd></dl>
+
+</td></tr></table></td></tr></table>
+</body></html>

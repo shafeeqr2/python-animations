@@ -1,0 +1,268 @@
+\documentclass[12pt]{article}
+
+\usepackage{bm}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{colortbl}
+\usepackage{xr}
+\usepackage{hyperref}
+\usepackage{longtable}
+\usepackage{xfrac}
+\usepackage{tabularx}
+\usepackage{float}
+\usepackage{siunitx}
+\usepackage{booktabs}
+\usepackage{ulem}
+
+\hypersetup{
+    bookmarks=true,         % show bookmarks bar?
+      colorlinks=true,       % false: boxed links; true: colored links
+    linkcolor=red,          % color of internal links (change box color with linkbordercolor)
+    citecolor=green,        % color of links to bibliography
+    filecolor=magenta,      % color of file links
+    urlcolor=cyan           % color of external links
+}
+
+\usepackage{fullpage}
+
+\begin{document}
+
+\title{Test Plan} 
+\author{Alex Guerrero, Keyur Patel and Shafeeq Rabbani}
+\date{\today}
+
+\maketitle
+\newpage
+
+\section*{Revisions}
+\addcontentsline{toc}{section}{Revisions}
+\begin{center}
+	\begin{longtable}{ | r | p{4cm} | p{10cm} | p{4cm} |}
+	\caption{Revisions} \\ \hline \label{TblInputVar} 
+	Name & Date & Description\\ \hline
+	\textcolor{blue}{Keyur Patel} & \textcolor{blue}{08/12/2015} &  \textcolor{blue}{Created Revision Table}\\ \hline
+	\textcolor{blue}{Keyur Patel} & \textcolor{blue}{08/12/2015} &  \textcolor{blue}{Added testing for proof of concept demo}\\ \hline
+	\end{longtable}
+\end{center}
+
+\newpage
+
+\tableofcontents
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%	1.) General Information 
+%
+%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Introduction}
+The test plan is designed to identify the types of tests to perform and helps explain how tests will be performed.
+
+\subsection{Test Items}
+The different items to be tested includes:
+
+\begin{itemize}
+\item A: The functions and methods of each class of the Model (backend)
+\item B: The game board against the functional requirements of the product
+\item C: The graphical interface that implements the Model 
+\end{itemize}
+
+\section{Software Risk Issues}
+The pre-existing code is to be redeveloped into modules as per the Model-View-Controller pattern for implementing interfaces. Modularizing the code may prove to be more time consuming than previously anticipated and hence, the code may not be ready in time to meet the deadline. As testing is dependent code, an incomplete code would bring the risk of incomplete or unattempted testing.
+
+The test cases may miss out some scenarios that result in errors in runtime.
+\section{Features to be Tested}
+As the first stage of our project redevelopment was to modularize the existing code, every single module in the implementation will be tested.
+
+As per the Model-View-Controller pattern, the model consists of the game environment with all the game rules. The controller is used to input commands into the environment. The view is the GUI of the game made by the graphics available in the PyGame package.
+
+The model portion contains classes Snake, Food, Map and Boundary classes. These classes will have to be tested.
+
+The Controller contains both keyboard inputs and mouse click inputs. This can be tested by giving the controller the appropriate keyboard and mouse inputs and seeing that it responds accordingly.
+
+For the testing of View, the GUI will have to be tested to ensure that it appears appealing and exactly as intended. This will be left for User testing.
+\section{Features not to be Tested}
+Functions are to be added to the snake class in the future to allow for the intangibility feature, sacrifice feature and freeze feature. These are not currently being developed and hence are not a part of the current testing.
+
+\section{Testing Types}
+Testing can be broken up into different types, which each have their own role in the testing the product. These test types should be utilized to comprehensively evaluate the quality of the product.
+\subsection{Structural Testing}
+Structural testing  is also known as white box testing. Structural tests are derived from the program's internal structure. It focuses on the nonfunctional requirements of the product. This type of testing shows errors that occur during the implementation by focusing on abnormal and extreme cases the product could encounter.
+\subsection{Functional Testing}
+Functional testing is also known as black box testing. Functional tests are derived from the functional requirements of the program. It focuses less on how the program works and more on the output of the system. These tests are focused on test cases where the product receives expected information.
+\subsection{Static vs. Dynamic Testing}
+Static testing simulate the dynamic environment and does not focus on code exectution. This testing involves code walkthroughs and requirements walkthroughs. Static testing is used prevalently in the design stage. In contrast, dynamic testing needs code to be executed. \newline\newline
+Dynamic testing involves test cases to be run and checked against expected outcomes. A technique to save time during dynamic testing is to choose representative test cases. 
+\subsection{Manual vs. Automatic Testing}
+Manual testing is done by people. It involves code walkthroughs and inspection. \newline\newline
+Automatic testing can usually be conducted by computers. The tools used to assist with automatic are unit testing tools for the respective programming language. Automatic testing relies on people for testing more qualitative aspects like GUI. 
+
+\section{Test Factors}
+
+\subsection{Reliability}
+\begin{itemize}
+\item Produces similar results under consistent conditions
+\item Test Techniques: unit testing, player testing, requirements
+\end{itemize}
+
+\subsection{Correctness}
+\begin{itemize}
+\item Shows the correct behaviour (expected output) for each input
+\item Test Techniques: unit testing, player testing, requirements
+\end{itemize}
+
+\subsection{Ease of Use}
+\begin{itemize}
+\item Ability of a user to naturally operate software
+\item Test Techniques: player testing, requirements
+\end{itemize}
+
+\subsection{Maintainable}
+\begin{itemize}
+\item Ease to which the code can be maintained
+\item Test Techniques: requirements
+\end{itemize}
+
+\subsection{Performance}
+\begin{itemize}
+\item Responsiveness of system to user input and stability during various workloads
+\item Test Techniques: stress, player testing
+\end{itemize}
+
+
+\section{Proof of Concept Test}
+\textcolor{blue}{Since the proof of concept is only a partial implementation of the final product, the testing will be fairly informal.\newline\newline Proof of concept shall be tested for the following:}
+\begin{itemize}
+\item \textcolor{blue}{The snake object can change directions}
+\item \textcolor{blue}{The snake object will grow when it eats food}
+\item \textcolor{blue}{The snake object will move in its current direction}
+\item \textcolor{blue}{The food object has a random location when instantiated}
+\item \textcolor{blue}{The snake object will be flagged as 'dead' when it hits itself or the border of the window (use constants to represent
+ window in backend testing)}
+\end{itemize}
+
+\section{Testing functional requirements}
+
+\noindent
+\subsection{Checking status of the game}
+\subsubsection*{Test Type}
+Automatic, dynamic, and functional testing
+\subsubsection*{Test Factors Involved}
+\subsubsection*{Initial State}
+The game board will have the snake and the border coordinates instantiated. The head coordinate of the snake will be adjacent to the border 
+\subsubsection*{Inputs}
+none
+\subsubsection*{Outputs}
+gameEnded returns the value true
+\subsubsection*{Schedule}
+Since this test is critical to the simulation, it is scheduled after the Map.py class is coded
+\subsubsection*{Methodology}
+This test will be conducted automatically by using PyUnit. A game state will be generated and the Snake will be moved into the wall
+\subsubsection*{Test For}
+This will test the functionality of the gameEnded function \newline
+
+\noindent
+\subsection{Game ends if snake collides with itself}
+\subsubsection*{Test Type}
+Manual, functional dynamic test
+\subsubsection*{Test Factors Involved}
+Correctness
+\subsubsection*{Initial State}
+Game will be in play state with the snake displayed on screen.
+\subsubsection*{Inputs}
+Keyboard directions
+\subsubsection*{Outputs}
+Game over game state
+\subsubsection*{Schedule}
+Testing will be completed during the initial development stage.
+\subsubsection*{Methodology}
+This test will be done manually by the developers. The code will be run and tester will start a game. The tester will then ensure that making the snake collide with its own body will end the game.
+\subsubsection*{Test For}
+The test the functionality of the snake move logic and game state flow. \newline
+
+\noindent
+\subsection{The snake grows by one unit when it eats food}
+\subsubsection*{Test Type}
+Manual, structural dynamic test
+\subsubsection*{Test Factors Involved}
+Correctness
+\subsubsection*{Initial State}
+Game will be in play state with Food and Snake object instantiated.
+\subsubsection*{Inputs}
+Keyboard input to get snake to food
+\subsubsection*{Outputs}
+len(Snake.points) will increase by one
+\subsubsection*{Schedule}
+Testing will be completed during the initial development stage.
+\subsubsection*{Methodology}
+This test will be done manually by the developers. The code will be run and tester will start a game. The tester will then ensure that making the snake eat a Food object.
+\subsubsection*{Test For}
+The test the functionality of the Snake.grow() method. \newline
+
+\noindent
+\subsection{Snake must be controlled by the keyboard}
+\subsubsection*{Test Type}
+Manual, functional dynamic test
+\subsubsection*{Test Factors Involved}
+Correctness
+\subsubsection*{Initial State}
+Game will be in play state with the snake displayed on screen moving in the default direction.
+\subsubsection*{Inputs}
+Keyboard buttons: W, A, S, D, and directional buttons (up, down, left, right). 
+\subsubsection*{Outputs}
+Depending on the current direction, the snake will either turn and change direction or do nothing.
+\subsubsection*{Schedule}
+Testing will be completed during the initial development stage.
+\subsubsection*{Methodology}
+This test will be done manually by the developers. The code will be run and tester will start a game. The tester will then ensure all keys behave properly for every direction the snake can move.
+\subsubsection*{Test For}
+The test the functionality of the snake move logic and controller handling keyboard events.\newline
+
+\noindent
+\subsection{Calculate a score based on the length of the snake}
+\subsubsection*{Test Type}
+Automatic, dynamic, and functional testing
+\subsubsection*{Test Factors Involved}
+Correctness
+\subsubsection*{Initial State}
+The game board will have the snake and the border coordinates instantiated.
+\subsubsection*{Inputs}
+none
+\subsubsection*{Outputs}
+game score should be the same as length of the snake
+\subsubsection*{Schedule}
+This test is critical to the correct functionality of the game, and will be tested once implemented
+\subsubsection*{Methodology}
+This test will be conducted automatically by using PyUnit. A game state will be generated and the current score will be checked against the current length of the snake
+\subsubsection*{Test For}
+This will test the functionality ofthe scoring system for the project. \newline
+
+
+\section{Future Testing}
+\subsection{Test Cases for Snake.py}
+
+\begin{center}
+	\begin{longtable}{ | r | p{4cm} | p{4cm} | p{4cm} |}
+	\caption{Snake.py} \\ \hline \label{TblInputVar} 
+	Method & Input & Expected Outcome\\ \hline
+	constructor & none &  first 20 points of the snake are generated\\ \hline
+	changeDir & dir=-1 & if current direction is 2 or -2, it will be updated to -1\\ \hline
+	\end{longtable}
+\end{center}
+
+
+
+
+\subsection{Test Cases for Map.py}
+\subsection{Test Cases for Food.py}
+\subsection{Testing for GUI}
+
+
+
+
+%\bibliographystyle {plain}
+%\bibliography {TemplateTestPlan}
+
+\end{document}
